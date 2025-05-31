@@ -3,7 +3,9 @@
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
-		"Miscellaneous"
+		"Marketing",
+        "Sales",
+        "Data & Storage"
 	],
 	"resources": {
 		"credentialDocumentation": [
