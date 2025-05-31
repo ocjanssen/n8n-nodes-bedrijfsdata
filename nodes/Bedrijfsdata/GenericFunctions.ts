@@ -16,6 +16,8 @@ export async function apiRequest(
 ): Promise<any> {
 	query = query || {};
 
+	query.front = 30;
+
 	const options: IRequestOptions = {
 		method,
 		body,

@@ -101,7 +101,7 @@ export const companiesGetOperationProperties: INodeProperties[] = [
         },
         routing: {
             request: { // THIS IS VALID SYNTAX FOR N8N!
-							// @ts-ignore
+								// @ts-ignore
                 qs: '={{ $value ? JSON.parse($value) : {} }}',
             },
         },
@@ -127,7 +127,6 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                 name: 'id',
                 type: 'string',
                 default: '',
-                description: 'Bedrijfsdata.nl ID of a specific company',
                 routing: {
                     request: {
                         qs: {
@@ -135,13 +134,13 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Bedrijfsdata.nl ID of a specific company',
             },
             {
                 displayName: 'Chamber of Commerce (KvK) Number',
                 name: 'coc',
                 type: 'string',
                 default: '',
-                description: 'Dutch Chamber of Commerce (KvK) number of a specific company',
                 routing: {
                     request: {
                         qs: {
@@ -149,13 +148,13 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Dutch Chamber of Commerce (KvK) number of a specific company',
             },
             {
                 displayName: 'Company Name',
                 name: 'name',
                 type: 'string',
                 default: '',
-                description: 'Search companies by official name',
                 routing: {
                     request: {
                         qs: {
@@ -163,13 +162,13 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Search companies by official name',
             },
             {
                 displayName: 'Domain Name',
                 name: 'domain',
                 type: 'string',
                 default: '',
-                description: 'Search companies by domain name(s). Comma separate multiple domains.',
                 routing: {
                     request: {
                         qs: {
@@ -177,13 +176,13 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Search companies by domain name(s). Comma separate multiple domains.',
             },
             {
                 displayName: 'Trade Name',
                 name: 'names',
                 type: 'string',
                 default: '',
-                description: 'Search companies by all known names, such as trade names. Comma separate multiple values.',
                 routing: {
                     request: {
                         qs: {
@@ -191,13 +190,13 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Search companies by all known names, such as trade names. Comma separate multiple values.',
             },
             {
                 displayName: 'VAT Number',
                 name: 'vat',
                 type: 'string',
                 default: '',
-                description: 'Search companies by tax registration number (btw nummer)',
                 routing: {
                     request: {
                         qs: {
@@ -205,6 +204,7 @@ export const companiesGetOperationProperties: INodeProperties[] = [
                         },
                     },
                 },
+                description: 'Search companies by tax registration number (btw nummer)',
             },
         ],
     },
@@ -883,35 +883,46 @@ export const companiesGetOperationProperties: INodeProperties[] = [
 		},
 		options: [
             {
-                displayName: 'Results per Page (Rows)',
+                displayName: 'Results per Page',
                 name: 'rows',
                 type: 'number',
                 default: 10,
-                description: 'Number of company profiles to return per page',
+                routing: {
+                    request: {
+                        qs: {
+                            rows: '={{ $value ? $value : undefined }}',
+                        },
+                    },
+                },
+                description: 'Number of company profiles to return',
             },
             {
-                displayName: 'Page Number',
+                displayName: 'Page',
                 name: 'page',
                 type: 'number',
                 default: '',
-                description: 'Page to return (when not returning all, 1-indexed, alternative to "Offset Results")',
-                displayOptions: {
-                    show: {
-                        '/returnAll': [false],
-                    }
+                routing: {
+                    request: {
+                        qs: {
+                            page: '={{ $value ? $value : undefined }}',
+                        },
+                    },
                 },
+                description: 'Page to return (given the number of results per page)',
             },
             {
-                displayName: 'Offset Results (Start)',
+                displayName: 'Offset Results',
                 name: 'start',
                 type: 'number',
                 default: '',
-                description: 'Number of results to skip before starting (when not returning all, 0-indexed, alternative to "Page Number")',
-                displayOptions: {
-                    show: {
-                        '/returnAll': [false],
-                    }
+                routing: {
+                    request: {
+                        qs: {
+                            start: '={{ $value ? $value : undefined }}',
+                        },
+                    },
                 },
+                description: 'Number of results to skip before starting to return results (alternative to "page")',
             },
         ],
     },
