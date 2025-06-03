@@ -27,12 +27,12 @@ export class bedrijfsdataApi implements ICredentialType {
 		properties: {
 			qs: {
 				'api_key': '={{$credentials.apiKey}}'
-			}
+			},
 		},
 	};
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.bedrijfsdata.nl/v1.1',
+			baseURL: 'https://api.bedrijfsdata.nl/v1.2',
 			method: 'GET',
 			url: '/companies',
 			qs: {

@@ -22,7 +22,7 @@ export async function apiRequest(
 		method,
 		body,
 		qs: query,
-		uri: `https://api.bedrijfsdata.nl/v1.1/${endpoint}`,
+		uri: `https://api.bedrijfsdata.nl/v1.2/${endpoint}`,
 		json: true,
 	};
 
