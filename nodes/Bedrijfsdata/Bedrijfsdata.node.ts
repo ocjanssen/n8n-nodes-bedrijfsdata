@@ -74,11 +74,11 @@ export class Bedrijfsdata implements INodeType {
 						value: 'companies',
 					},
                     {
-						name: 'Companies (related)',
+						name: 'Companies (Related)',
 						value: 'companies_related',
 					},
                     {
-						name: 'Company Data (advanced)',
+						name: 'Company Data (Advanced)',
 						value: 'advanced_data',
 					},
 					{
