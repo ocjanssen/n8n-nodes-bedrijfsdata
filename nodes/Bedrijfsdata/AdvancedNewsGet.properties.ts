@@ -47,7 +47,7 @@ export const advancedNewsGetOperationProperties: INodeProperties[] = [
         name: 'details',
         type: 'boolean',
         default: false,
-        description: 'Whether to add details such as the total number of news items found & credit usage. WARNING: This returns 1 item in stead of an array of items.',
+        description: 'Whether to add details such as the total number of news items found & credit usage. Warning: This returns 1 item in stead of an array of items.',
         displayOptions: {
             show: {
                 resource: ['advanced_data'],
