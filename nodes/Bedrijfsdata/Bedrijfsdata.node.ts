@@ -70,16 +70,24 @@ export class Bedrijfsdata implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'Advanced Company Data',
-						value: 'advanced_data',
-					},
-					{
-						name: 'Company',
+						name: 'Companies',
 						value: 'companies',
+					},
+                    {
+						name: 'Companies (related)',
+						value: 'companies_related',
+					},
+                    {
+						name: 'Company Data (advanced)',
+						value: 'advanced_data',
 					},
 					{
 						name: 'Enrich',
 						value: 'enrich',
+					},
+                    {
+						name: 'Live web RAG',
+						value: 'rag',
 					},
 					{
 						name: 'LLM Template',
@@ -90,16 +98,8 @@ export class Bedrijfsdata implements INodeType {
 						value: 'data_misc',
 					},
 					{
-						name: 'Related Company',
-						value: 'companies_related',
-					},
-					{
 						name: 'Validation & Cleansing',
 						value: 'validation',
-					},
-					{
-						name: 'Web RAG',
-						value: 'rag',
 					},
 				],
 				default: 'companies',
