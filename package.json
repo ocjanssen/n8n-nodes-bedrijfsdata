@@ -12,14 +12,14 @@
     "api-integration"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/OohBen/n8n-bedrijfsdata-custom-node#readme",
+  "homepage": "https://www.bedrijfsdata.nl",
   "author": {
     "name": "Bedrijfsdata",
     "email": "info@ocjanssen.nl"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OohBen/n8n-bedrijfsdata-custom-node.git"
+    "url": "https://github.com/ocjanssen/n8n-nodes-bedrijfsdata.git"
   },
   "engines": {
     "node": ">=20.15"

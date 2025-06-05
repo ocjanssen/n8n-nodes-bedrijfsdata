@@ -51,7 +51,10 @@ You need a Bedrijfsdata.nl API key to use this node:
 
 ## Supported Operations
 
-### Foundation Resource
+### Companies Resource
+
+#### Get Company
+Retrieve a company profile by Bedrijfsdata.nl ID.
 
 #### Get Companies
 Search and retrieve Dutch company information with extensive filtering options:
@@ -108,13 +111,111 @@ Search and retrieve Dutch company information with extensive filtering options:
 **Output Control:**
 - **Rows**: Number of companies to return
 
+### Enrich Resource
+
+#### Enrich Company Data
+Enrich your own company data with additional information from Bedrijfsdata.
+
+### LLM Template Resource
+
+#### Execute LLM Template
+Generate custom content by executing your LLM template with company data.
+
+### Web RAG Resource
+
+#### Get RAG URL
+Extract and analyze content from a publicly accessible URL.
+
+#### Get RAG Search
+Get search snippets from popular search engines by query.
+
+### Related Companies Resource
+
+#### Get Corporate Family
+Find companies that belong to the same corporate family as a specific company.
+
+#### Get Shared Address
+Discover companies that are registered at the same address as a specific company.
+
+### Advanced Company Data Resource
+
+#### Get Many Employees
+Retrieve employee information for a specific company.
+
+#### Get Many News
+Collect news articles related to a specific company.
+
+#### Get Many Vacancies
+Find job openings posted by a specific company.
+
+### Validation & Cleansing Resource
+
+#### Validate Email Address
+Perform basic validation on email addresses.
+
+#### Validate BIC Number
+Verify the validity of BIC (Bank Identifier Code) numbers.
+
+#### Validate City
+Validate global city names.
+
+#### Geocoding
+Convert addresses to geographic coordinates and vice versa.
+
+#### Validate IBAN Number
+Check the validity of IBAN (International Bank Account Number) formats.
+
+#### Validate KvK Number
+Verify Dutch Chamber of Commerce (KvK) registration numbers.
+
+#### Validate LEI Number
+Validate Legal Entity Identifier (LEI) numbers.
+
+#### Validate Phone Number
+Check and format global phone numbers.
+
+#### Validate Postcode
+Verify postal code formats from different countries.
+
+#### Validate URL
+Check URL validity and structure.
+
+#### Validate Dutch VAT Number
+Verify Dutch VAT numbers (BTW-nummers).
+
+### Other Data Resource
+
+#### Get BAG Data
+Retrieve Dutch BAG (Basisregistratie Adressen en Gebouwen) data by address.
+
+#### Get Exchange Rate
+Access exchange rates for over 300 currencies, including cryptocurrencies.
+
+#### Get DNS Scan
+Extract data directly from a domain's DNS records.
+
+#### Get Password Leaks
+Check how many times a password has been exposed in data breaches.
+
+#### Get Property Information
+Obtain property details by address or company ID.
+
+#### Get Website Performance
+Analyze a company's website performance and popularity rankings.
+
+#### Get EU Tenders
+Search the European Tender database.
+
+#### Get Web Rankings
+Access global rankings like Majestic, CRUX, CloudFlare, and DomCop.
+
 ## Usage Examples
 
 ### Basic Company Search
 Search for companies by keyword:
 ```json
 {
-  "resource": "foundation",
+  "resource": "companies",
   "operation": "get",
   "country": "nl",
   "additionalFields": {
@@ -128,7 +229,7 @@ Search for companies by keyword:
 Search for companies in Amsterdam:
 ```json
 {
-  "resource": "foundation",
+  "resource": "companies",
   "operation": "get",
   "country": "nl",
   "additionalFields": {
@@ -143,7 +244,7 @@ Search for companies in Amsterdam:
 Find companies using specific technologies:
 ```json
 {
-  "resource": "foundation",
+  "resource": "companies",
   "operation": "get",
   "country": "nl",
   "additionalFields": {
@@ -158,7 +259,7 @@ Find companies using specific technologies:
 Find companies within 25km of coordinates:
 ```json
 {
-  "resource": "foundation",
+  "resource": "companies",
   "operation": "get",
   "country": "nl",
   "additionalFields": {
@@ -201,7 +302,7 @@ For detailed API documentation, visit [docs.bedrijfsdata.nl](https://docs.bedrij
 
 ```bash
 # Clone the repository
-git clone https://github.com/OohBen/n8n-bedrijfsdata-custom-node.git
+git clone https://github.com/ocjanssen/n8n-nodes-bedrijfsdata.git
 
 # Install dependencies
 npm install
