@@ -28,7 +28,7 @@ export const enrichGetOperationProperties: INodeProperties[] = [
         name: 'details',
         type: 'boolean',
         default: false,
-        description: 'Whether to add details such as credit usage. WARNING: This creates an output that needs to be parsed to process individual companies.',
+        description: 'Whether to add details such as credit usage. Warning: This creates an output that needs to be parsed to process individual companies.',
         routing: {
             request: {
                 qs: {
