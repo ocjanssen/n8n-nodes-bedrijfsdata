@@ -331,7 +331,7 @@ export class Bedrijfsdata implements INodeType {
 						routing: {
 							request: {
 								method: 'GET',
-								url: '/corporate_family',
+								url: '/people',
                                 qs: {
                                     front: 30,
                                 }
