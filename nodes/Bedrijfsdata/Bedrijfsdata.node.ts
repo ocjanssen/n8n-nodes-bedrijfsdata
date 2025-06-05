@@ -70,15 +70,15 @@ export class Bedrijfsdata implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'Companies',
+						name: 'Company',
 						value: 'companies',
 					},
                     {
-						name: 'Companies (Related)',
+						name: 'Company (Related)',
 						value: 'companies_related',
 					},
                     {
-						name: 'Company Data (Advanced)',
+						name: 'Data (Advanced)',
 						value: 'advanced_data',
 					},
 					{
@@ -86,7 +86,7 @@ export class Bedrijfsdata implements INodeType {
 						value: 'enrich',
 					},
                     {
-						name: 'Live web RAG',
+						name: 'Live Web RAG',
 						value: 'rag',
 					},
 					{
