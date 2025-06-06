@@ -15,7 +15,7 @@ export const otherSiterankGetOperationProperties: INodeProperties[] = [
         routing: {
             request: {
                 qs: {
-                    company_id: '={{ $value ? $value : undefined }}',
+                    id: '={{ $value ? $value : undefined }}',
                 },
             },
         },

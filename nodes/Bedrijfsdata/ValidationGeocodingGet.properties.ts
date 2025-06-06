@@ -26,7 +26,7 @@ export const validationGeocodingGetOperationProperties: INodeProperties[] = [
         displayName: 'Country (ISO 3166-1 Alpha-2)',
         name: 'country_code',
         type: 'string',
-        default: 'nl',
+        default: 'NL',
         displayOptions: {
             show: {
                 resource: ['validation'],
@@ -40,6 +40,6 @@ export const validationGeocodingGetOperationProperties: INodeProperties[] = [
                 },
             },
         },
-        description: '(Optional) Enter a country code (ex: nl, us)',
+        description: '(Optional) Enter a country code (ex: NL, BE)',
     }
 ];

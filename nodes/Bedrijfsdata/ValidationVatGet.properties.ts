@@ -16,7 +16,7 @@ export const validationVatGetOperationProperties: INodeProperties[] = [
         routing: {
             request: {
                 qs: {
-                    url: '={{ $value ? $value : undefined }}',
+                    vat: '={{ $value ? $value : undefined }}',
                 },
             },
         },

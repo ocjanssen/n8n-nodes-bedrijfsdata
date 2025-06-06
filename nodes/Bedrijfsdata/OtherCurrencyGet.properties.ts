@@ -5,7 +5,7 @@ export const otherCurrenyGetOperationProperties: INodeProperties[] = [
         displayName: 'Currency Code',
         name: 'currency',
         type: 'string',
-        default: '',
+        default: 'eur',
         required: true,
         displayOptions: {
             show: {

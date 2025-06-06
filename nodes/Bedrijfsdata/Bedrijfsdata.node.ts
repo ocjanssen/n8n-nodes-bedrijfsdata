@@ -608,7 +608,7 @@ export class Bedrijfsdata implements INodeType {
 					},
                     {
 						name: 'Get Exchange Rate',
-						value: 'get_curreny',
+						value: 'get_currency',
 						action: 'Get exchange rate',
 						description: 'Get exchange rates for 300+ currencies (incl. crypto).',
 						routing: {
