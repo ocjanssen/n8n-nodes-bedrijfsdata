@@ -1,6 +1,6 @@
 {
   "name": "@bedrijfsdatanl/n8n-nodes-bedrijfsdata",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "n8n node for Bedrijfsdata.nl API - Search and retrieve Dutch company information",
   "keywords": [
     "n8n-community-node-package",
