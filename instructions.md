@@ -24,4 +24,4 @@ Once repo is transferred to you:
 ```bash
 npm login
 npm publish
-```
+``` 
