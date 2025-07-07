@@ -4,7 +4,7 @@ import type {
 	IHookFunctions,
 	IHttpRequestMethods,
 	ILoadOptionsFunctions,
-	IRequestOptions,
+	IHttpRequestOptions,
 } from 'n8n-workflow';
 
 export async function apiRequest(
@@ -18,11 +18,11 @@ export async function apiRequest(
 
 	query.front = 30;
 
-	const options: IRequestOptions = {
+	const options: IHttpRequestOptions = {
 		method,
 		body,
 		qs: query,
-		uri: `https://api.bedrijfsdata.nl/v1.2/${endpoint}`,
+		url: `https://api.bedrijfsdata.nl/v1.2/${endpoint}`,
 		json: true,
 	};
 
@@ -30,5 +30,5 @@ export async function apiRequest(
 		delete options.body;
 	}
 
-	return await this.helpers.requestWithAuthentication.call(this, 'bedrijfsdataApi', options);
+	return await this.helpers.httpRequestWithAuthentication.call(this, 'bedrijfsdataApi', options);
 }

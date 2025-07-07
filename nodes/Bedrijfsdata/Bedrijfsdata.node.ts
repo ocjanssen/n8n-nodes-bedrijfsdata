@@ -53,6 +53,7 @@ export class Bedrijfsdata implements INodeType {
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
+        usableAsTool: true,
 		credentials: [
 			{
 				name: 'bedrijfsdataApi',
