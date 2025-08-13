@@ -875,7 +875,7 @@ export const companiesGetManyOperationProperties: INodeProperties[] = [
                 routing: {
                     request: {
                         qs: {
-                            rows: '={{ $value ? $value : undefined }}',
+                            rows: '={{ ($value || $value === 0) ? $value : undefined }}',
                         },
                     },
                 },

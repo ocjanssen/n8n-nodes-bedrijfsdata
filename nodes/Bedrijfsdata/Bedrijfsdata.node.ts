@@ -12,6 +12,7 @@ import { companiesGetManyOperationProperties } from './CompaniesGetMany.properti
 import { suggestGetOperationProperties } from './SuggestGet.properties';
 import { enrichGetOperationProperties } from './EnrichGet.properties';
 import { llmGetOperationProperties } from './LlmGet.properties';
+import { ragDomainGetOperationProperties } from './RagDomainGet.properties';
 import { ragUrlGetOperationProperties } from './RagUrlGet.properties';
 import { ragSearchGetOperationProperties } from './RagSearchGet.properties';
 import { relatedFamilyGetOperationProperties } from './RelatedFamilyGet.properties';
@@ -237,6 +238,21 @@ export class Bedrijfsdata implements INodeType {
 				},
 				options: [
 					{
+						name: 'Get RAG Domain',
+						value: 'get_domain',
+						action: 'Get RAG domain',
+						description: 'Get content from a publicly accessible website',
+						routing: {
+							request: {
+								method: 'GET',
+								url: '/rag_domain',
+                                qs: {
+                                    front: 30,
+                                }
+							},
+						},
+					},
+                    {
 						name: 'Get RAG URL',
 						value: 'get_url',
 						action: 'Get RAG URL',
@@ -254,7 +270,7 @@ export class Bedrijfsdata implements INodeType {
                     {
 						name: 'Get RAG Search',
 						value: 'get_search',
-						action: 'Get rag search',
+						action: 'Get RAG search',
 						description: 'Get search snippets from popular search engines by query',
 						routing: {
 							request: {
@@ -689,6 +705,7 @@ export class Bedrijfsdata implements INodeType {
             ...suggestGetOperationProperties,
             ...enrichGetOperationProperties,
             ...llmGetOperationProperties,
+            ...ragDomainGetOperationProperties,
             ...ragUrlGetOperationProperties,
             ...ragSearchGetOperationProperties,
             ...relatedFamilyGetOperationProperties,

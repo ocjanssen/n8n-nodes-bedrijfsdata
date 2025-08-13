@@ -36,7 +36,7 @@ export const relatedFamilyGetOperationProperties: INodeProperties[] = [
         routing: {
             request: {
                 qs: {
-                    rows: '={{ $value ? $value : 10 }}',
+                    rows: '={{ ($value || $value === 0) ? $value : 10 }}',
                 },
             },
         },

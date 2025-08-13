@@ -98,7 +98,7 @@ export const llmGetOperationProperties: INodeProperties[] = [
                 name: 'domain',
                 type: 'string',
                 default: '',
-                description: '(Optional) Publicly accessible domain. Provide your template with the contents of a specific website (uses /rag_url under the hood).',
+                description: '(Optional) Publicly accessible domain. Provide your template with the contents of a specific website (uses /rag_domain under the hood).',
                 routing: {
                     request: {
                         qs: {

@@ -123,6 +123,9 @@ Generate custom content by executing your LLM template with company data.
 
 ### Web RAG Resource
 
+#### Get RAG domain
+Extract and analyze content from a publicly accessible website.
+
 #### Get RAG URL
 Extract and analyze content from a publicly accessible URL.
 
