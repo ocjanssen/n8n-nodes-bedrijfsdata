@@ -362,7 +362,7 @@ export const companiesGetManyOperationProperties: INodeProperties[] = [
                 routing: {
                     request: {
                         qs: {
-                            AND_text: '={{ $value ? $value : undefined }}',
+                            AND_text: '={{ $value ? $value.split(",") : undefined }}',
                         },
                     },
                 },
@@ -376,7 +376,7 @@ export const companiesGetManyOperationProperties: INodeProperties[] = [
                 routing: {
                     request: {
                         qs: {
-                            OR_text: '={{ $value ? $value : undefined }}',
+                            OR_text: '={{ $value ? $value.split(",") : undefined }}',
                         },
                     },
                 },
@@ -390,7 +390,7 @@ export const companiesGetManyOperationProperties: INodeProperties[] = [
                 routing: {
                     request: {
                         qs: {
-                            NOT_text: '={{ $value ? $value : undefined }}',
+                            NOT_text: '={{ $value ? $value.split(",") : undefined }}',
                         },
                     },
                 },
